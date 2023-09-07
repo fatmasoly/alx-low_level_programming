@@ -8,10 +8,10 @@
  * Return: Always 1 (not success)
 */
 
-int main(void)
-{
-char qu[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"
-, write(2, qu, 59);
+int main(void){
+
+const char quote[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"
+; write(2, quote, 59);
 return (1);
 
 }
