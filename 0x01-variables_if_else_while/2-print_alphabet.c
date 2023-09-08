@@ -7,16 +7,16 @@
  * Return: Always 0 (success)
 */
 
-int main(void){
+int main(void)
+{
 int i;
 char letter = 'a';
-for(i=0;i<26;i++)
-{ 
+for (i = 0 ; i < 26 ; i++)
+{
 putchar(letter);
 letter++;
 }
 putchar('\n');
-
 return (0);
 
 }
