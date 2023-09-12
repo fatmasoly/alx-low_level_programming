@@ -13,7 +13,7 @@ for (column = 0 ; column <= 9 ; column++)
 x = raw * column;
 if (column == 0)
 {
-_putchar(x + '0');
+_putchar('0');
 }
 else
 {
