@@ -1,11 +1,9 @@
 #include "main.h"
 /**
- * main - Point
- *
- * Description: A C program that prints with puts function
- *
- * Return: Always 0 (success)
-*/
+ * _islower - check if char is lowercase
+ * @c: is the char to be checked
+ * Return: 1 if char is lowercase, otherwise 0.
+ */
 int _islower(int c);
 {
 if (c >= 97 && c <= 122)
