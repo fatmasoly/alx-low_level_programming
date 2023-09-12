@@ -9,13 +9,13 @@
 int main(void)
 {
 int n = 50;
-unsigned long long  first = 1, second = 2;
+int first = 1, second = 2;
 printf("Fibonacci Sequence (first %d numbers):\n", n);
-printf("%llu, %llu, ", first, second);
+printf("%d, %d, ", first, second);
 for (int i = 1 ; i <= 50 ; i++)
 {
-unsigned long long next = first + second;
-printf("%llu", next);
+int next = first + second;
+printf("%d", next);
 if (i < n - 1)
 {
 printf(", ");
