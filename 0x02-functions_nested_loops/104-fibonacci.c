@@ -11,16 +11,17 @@ int main(void)
 {
 int i;
 unsigned int first = 1, second = 2, next;
+printf("%u", first);
 for (i = 2; i < 98; i++)
 {
 next = first + second;
 if (i < 97)
 {
-printf("%u, ", next);
+printf(", %u, ", next);
 }
 else
 {
-printf("%u\n", next);
+printf("...\n", next);
 }
 first = second;
 second = next;
