@@ -14,17 +14,21 @@ x = raw * column;
 if (column == 0)
 {
 _putchar('0');
+}
+else
+{
 _putchar(',');
 _putchar(' ');
+}
+if (x < 10)
+{
 _putchar(' ');
 }
 else
 {
-_putchar(' ');
-_putchar(' ');
 _putchar(x / 10 + '0');
-_putchar(x % 10 + '0');
 }
+_putchar(x % 10 + '0');
 }
 _putchar('\n');
 }
