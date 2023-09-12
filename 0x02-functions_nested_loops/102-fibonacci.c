@@ -8,24 +8,18 @@
  */
 int main(void)
 {
-int n = 50;
-int first = 1, second = 2;
-printf("Fibonacci Sequence (first %d numbers):\n", n);
-printf("%d, %d, ", first, second);
-for (int i = 1 ; i <= 50 ; i++)
+int i;
+unsigned long fib1 = 0, fib2 = 1, sum;
+for (i = 0; i < 50; i++)
 {
-int next = first + second;
-printf("%d", next);
-if (i < n - 1)
-{
-printf(", ");
-}
-else
-{
+sum = fib1 + fib2;
+printf("%lu", sum);
+fib1 = fib2;
+fib2 = sum;
+if (count == 49)
 printf("\n");
-}
-first = second;
-second = next;
+else
+printf(", ");
 }
 return (0);
 }
