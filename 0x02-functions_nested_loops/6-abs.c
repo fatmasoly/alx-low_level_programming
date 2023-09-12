@@ -1,14 +1,11 @@
 #include "main.h"
 /**
- * main - Point
- *
- * Description: A C program that prints with puts function
- *
- * Return: Always 0 (success)
-*/
-int _abs(int);
+ * _abs - computes the absolute value of an integer
+ * @num: the int to check
+ * Return: the absolute value of int
+ */
+int _abs(int num)
 {
-int num;
 if (num < 0)
 {
 return (-num);
