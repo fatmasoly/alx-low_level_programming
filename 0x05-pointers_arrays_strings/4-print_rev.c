@@ -11,7 +11,6 @@ void print_rev(char *s)
 {
 char temp;
 int len, l_index, r_index;
-len = strlen(*s)
 l_index = 0;
 r_index = len - 1;
 while (l_index < r_index)
