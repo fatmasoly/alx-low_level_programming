@@ -14,17 +14,13 @@ int sign = 1;
 do
 {
 if (*s == '-')
-
-sign = -1;
+sign *= -1;
 s++;
-
 else if  (*s >= '0' && *s <= '9')
-
 number = (number * 10) + (*s - '0');
 else if (number > 0)
 break;
 }
-while (*s++)
-
+while (*s++);
 return ((number)*(sign));
 }
