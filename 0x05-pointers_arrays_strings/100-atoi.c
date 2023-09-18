@@ -11,23 +11,20 @@ int _atoi(char *s)
 {
 unsigned int number = 0;
 int sign = 1;
-while (*s == '-')
+do
 {
-s++;
-}
 if (*s == '-')
-{
+
 sign = -1;
 s++;
-}
-else if (*s == '+')
-{
-s++;
-}
-while (*s >= '0' && *s <= '9')
-{
+
+else if  (*s >= '0' && *s <= '9')
+
 number = (number * 10) + (*s - '0');
-s++;
+else if (number > 0)
+break;
 }
+while (*s++)
+
 return ((number)*(sign));
 }
