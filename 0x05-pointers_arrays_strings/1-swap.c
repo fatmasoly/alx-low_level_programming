@@ -2,7 +2,7 @@
 /**
  * swap_int -  a function that takes swaps the values of two integers.
  *
- * @*a & @*b: int parameters
+ * @*a & @*b: int pointers
  *
  * Return nothing
  */
