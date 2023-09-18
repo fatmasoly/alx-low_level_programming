@@ -8,12 +8,8 @@
  */
 int _strlen(char *s)
 {
-char str[] = "My first strlen!";
 int len;
-if (len >= 10)
-{
-_putchar('0' + len / 10);
-_putchar('0' + len % 10);
+for (len = 0 ; *s != '\0' ; s++)
+++len;
 return (len);
 }
-
