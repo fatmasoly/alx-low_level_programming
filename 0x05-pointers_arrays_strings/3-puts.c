@@ -14,4 +14,5 @@ while (*str != '\0')
 _puts(str);
 str++;
 }
+}
 
