@@ -4,7 +4,7 @@
  *
  * @str : string parameter input
  *
- * Return: (0)
+ * Return: nothing
  *
  */
 void _puts(char *str)
@@ -13,7 +13,5 @@ while (*str != '\0')
 {
 _puts(str);
 str++;
-}
-return (0);
 }
 
