@@ -4,7 +4,7 @@
  *
  * @s : string parameter input
  *
- * Return: (0)
+ * Return: Reversed string
  *
  */
 void print_rev(char *s)
@@ -22,6 +22,6 @@ r_index--;
 _putchar(*s);
 }
 _putchar('\n');
-return (0);
+
 }
 
