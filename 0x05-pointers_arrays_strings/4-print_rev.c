@@ -9,25 +9,15 @@
  */
 void print_rev(char *s)
 {
-char temp;
-int l_index = 0;
-int r_index = 0;
-while (s[r_index] != '\0')
+int length = 0;
+while (s[length] != '\0')
 {
-r_index++;
+	length++
 }
-r_index--;
-
-while (l_index < r_index)
+for (int i = length -1 ; i >= 0 ; i--)
 {
-temp = s[l_index];
-s[r_index] = temp;
-l_index++;
-r_index--;
-}
-while (*s != '\0')
-{
-_putchar(*s++);
+	_putchar(s[i]);
 }
 _putchar('\n');
 }
+
