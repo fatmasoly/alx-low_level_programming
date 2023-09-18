@@ -16,7 +16,7 @@ do
 if (*s == '-')
 sign *= -1;
 s++;
-else if  (*s >= '0' && *s <= '9')
+else if (*s >= '0' && *s <= '9')
 number = (number * 10) + (*s - '0');
 else if (number > 0)
 break;
@@ -24,3 +24,4 @@ break;
 while (*s++);
 return ((number)*(sign));
 }
+
