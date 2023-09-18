@@ -13,11 +13,11 @@ char temp;
 int l_index, r_index;
 while (l_index < r_index)
 {
-temp = s[l_index];
-s[r_index] = temp;
+temp = *s[l_index];
+*s[r_index] = temp;
 l_index++;
 r_index--;
-_putchar(*s);
+_putchar(*s++);
 }
 _putchar('\n');
 
