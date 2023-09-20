@@ -1,10 +1,10 @@
 #include "main.h"
 /**
  * leet - Encodes a string into 1337.
- * @str: The input string to be encoded.
+ * @n: The input string to be encoded.
  *
  * Description:
- * function replaces specific letters in the input string 'str' with
+ * function replaces specific letters in the input string 'n' with
  * their corresponding 1337 encoding as follows:
  * 'a' and 'A' -> '4'
  * 'e' and 'E' -> '3'
@@ -13,25 +13,24 @@
  * 'l' and 'L' -> '1'
  * It modifies 'str' in place.
  *
- * Return: A pointer to the modified string 'str'.
+ * Return: A pointer to the modified string 'n'.
  */
-char *leet(char *c)
+
+char *leet(char *n)
 {
-char *cp = c;
-char key[] = {'A', 'E', 'o', 'T', 'L'};
-int value[] = {4, 3, 0, 7, 1};
-unsigned int i;
-while (*c)
+int i, j;
+char s1[] = "aAeEoOtTlL";
+char s2[] = "4433007711";
+for (i = 0; n[i] != '\0'; i++)
 {
-for (i = 0 ; i < sizeof(key) / sizeof(char) ; i++)
+for (j = 0; j < 10; j++)
 {
-if (*c == key[i] || *c == key[i] + 32)
+if (n[i] == s1[j])
 {
-*c = 48 + value[i];
-}
-c++
+n[i] = s2[j];
 }
 }
-return (cp);
+}
+return (n);
 }
 
