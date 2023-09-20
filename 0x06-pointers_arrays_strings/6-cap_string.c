@@ -27,9 +27,9 @@ else if (new_word || index == 0)
 {
 str[index] -= 32;
 new_word = 0;
-}
 index++;
 }
 return (str);
+}
 }
 
