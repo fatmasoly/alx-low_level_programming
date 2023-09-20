@@ -6,8 +6,8 @@
  *
  * Description:
  * This function takes an input string 'str' and capitalizes the first letter
- * of each word in the string where words are separated by specified separators:
- * space, tabulation, newline, ',', ';', '.', '!', '?', '"', '(', ')', '{', and '}'.
+ * of each word where words are separated by specified separators:
+ * ',', ';', '.', '!', '?', '"', '(', ')', '{', and '}'.
  * It modifies 'str' in place.
  *
  * Return: A pointer to the modified string 'str'.
