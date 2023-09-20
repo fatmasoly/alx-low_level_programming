@@ -17,28 +17,20 @@
  */
 char *leet(char *str)
 {
-char leet_map[] = "443701";
-int i = 0;
-int j;
-while (str[i])
+char *cp = str;
+char key[] = {'A', 'E', 'o', 'T', 'L'};
+int value[] = {4, 3, 0, 7, 1};
+unsigned int i;
+while (*str)
 {
-j = 0;
-if (str[i] == 'a' || str[i] == 'A' || str[i] == 'e' || str[i] == 'E' ||
-str[i] == 'o' || str[i] == 'O' || str[i] == 't' || str[i] == 'T' ||
-str[i] == 'l' || str[i] == 'L')
+for (i = 0 ; i < sizeof(key) / sizeof(char) ; i++)
 {
-while ("aAeEoOtTlL"[j] != '\0')
+if (*str == key[i] || *str == key[i] + 32)
 {
-if (str[i] == "aAeEoOtTlL"[j])
-{
-str[i] = leet_map[j];
-break;
+*str = 48 + value[i];
 }
-j++;
+str++
 }
 }
-i++;
+return (cp);
 }
-return (str);
-}
-
