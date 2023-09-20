@@ -15,22 +15,23 @@
  *
  * Return: A pointer to the modified string 'str'.
  */
-char *leet(char *str)
+char *leet(char *c)
 {
-char *cp = str;
+char *cp = c;
 char key[] = {'A', 'E', 'o', 'T', 'L'};
 int value[] = {4, 3, 0, 7, 1};
 unsigned int i;
-while (*str)
+while (*c)
 {
 for (i = 0 ; i < sizeof(key) / sizeof(char) ; i++)
 {
-if (*str == key[i] || *str == key[i] + 32)
+if (*c == key[i] || *c == key[i] + 32)
 {
-*str = 48 + value[i];
+*c = 48 + value[i];
 }
-str++
+c++
 }
 }
 return (cp);
 }
+
