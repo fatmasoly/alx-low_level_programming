@@ -19,17 +19,24 @@ int index = 0;
 int new_word = 1;
 while (str[index])
 {
-if (!(str[index] >= 'a' && str[index] <= 'z'))
+if (str[index] == ' ' || str[index] == '\t' || str[index] == '\n' ||
+str[index] == ',' || str[index] == ';' || str[index] == '.' ||
+str[index] == '!' || str[index] == '?' || str[index] == '"' ||
+str[index] == '(' || str[index] == ')' || str[index] == '{' ||
+str[index] == '}')
 {
 new_word = 1;
 }
-else if (new_word || index == 0)
+else if (new_word)
+{
+if (str[index] >= 'a' && str[index] <= 'z')
 {
 str[index] -= 32;
+}
 new_word = 0;
+}
 index++;
 }
 return (str);
-}
 }
 
