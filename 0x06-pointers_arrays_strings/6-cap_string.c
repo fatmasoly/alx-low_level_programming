@@ -16,25 +16,18 @@
 char *cap_string(char *str)
 {
 int index = 0;
+int new_word = 1;
 while (str[index])
 {
-while (!(str[index] >= 'a' && str[index] <= 'z'))
-index++;
-if (str[index - 1] == ' ' ||
-str[index - 1] == '\t' ||
-str[index - 1] == '\n' ||
-str[index - 1] == ',' ||
-str[index - 1] == ';' ||
-str[index - 1] == '.' ||
-str[index - 1] == '!' ||
-str[index - 1] == '?' ||
-str[index - 1] == '"' ||
-str[index - 1] == '(' ||
-str[index - 1] == ')' ||
-str[index - 1] == '{' ||
-str[index - 1] == '}' |
-index == 0)
+if (!(str[index] >= 'a' && str[index] <= 'z'))
+{
+new_word = 1;
+}
+else if (new_word || index == 0)
+{
 str[index] -= 32;
+new_word = 0;
+}
 index++;
 }
 return (str);
