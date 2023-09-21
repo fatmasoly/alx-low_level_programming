@@ -23,10 +23,6 @@ char *rot13(char *str)
 char base;
 char c;
 int i;
-if (str == NULL)
-{
-return (NULL);
-}
 for (i = 0 ; str[i] != '\0' ; i++)
 {
 char c = str[i];
