@@ -14,24 +14,27 @@
  * @str: The input string to be encoded. It must be a null-terminated string.
  *
  * Return:
- * A pointer to the encoded string, which is the same as the input string.
- * If the input string is NULL, the function returns NULL.
+ * A pointer to the encoded string
  */
 
 char *rot13(char *str)
 {
-char base;
-char c;
 int i;
-for (i = 0 ; str[i] != '\0' ; i++)
+char orign[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+char Rott[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+char *ptr = str;
+while (*str)
 {
-char c = str[i];
-if ((c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z'))
+for (i = 0 ; i <= 52 ; i++)
 {
-char base = (c >= 'a' && c <= 'z') ? 'a' : 'A';
+if (*str == orign[i])
+{
+*str = Rott[i];
+break;
 }
-str[i] = (c - base + 13) % 26 + base;
 }
-return (str);
+str++;
+}
+return (ptr);
 }
 
