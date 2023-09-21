@@ -58,6 +58,6 @@ while (l-- >= 0)
 r[l + 1] = r[l];
 r[0] = d + '0';
 }
-return (0);
+return (r);
 }
 
