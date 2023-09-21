@@ -20,8 +20,8 @@
 
 char *rot13(char *str)
 {
-char *ptr = str;
 char base;
+char c;
 int i;
 if (str == NULL)
 {
