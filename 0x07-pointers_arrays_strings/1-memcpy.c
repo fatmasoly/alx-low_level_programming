@@ -14,7 +14,7 @@ char *ptr = src;
 unsigned int i;
 for (i = 0 ; i < n ; i++)
 {
-dest[i] = src[i] + 1;
+dest[i] = src[i];
 src++;
 }
 return (dest);
