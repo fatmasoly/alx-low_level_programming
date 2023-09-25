@@ -21,7 +21,8 @@ while (*haystack != '\0')
 {
 sta_haystack = haystack;
 sta_needle = needle;
-while (*sta_haystack != '\0' && *sta_needle != '\0' && *sta_haystack == *sta_needle)
+while (*sta_haystack != '\0' && *sta_needle != '\0'
+&& *sta_haystack == *sta_needle)
 {
 sta_haystack++;
 sta_needle++;
