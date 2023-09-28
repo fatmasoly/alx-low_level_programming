@@ -13,7 +13,6 @@
  * Return: The natural square root of @n if it exists, or -1 if @n is
  * negative or does not have a natural square root.
  */
-
 int _sqrt_recursion(int n)
 {
 if (n < 0)
@@ -26,19 +25,30 @@ return (n);
 }
 else
 {
-int i = 1;
-while (i * i <= n)
-{
-i++;
+return (calculate_sqrt(n, 1));
 }
-if ((i - 1) * (i - 1) == n)
-{
-return (i - 1);
 }
-else
+/**
+ * calculate_sqrt - Helper function for recursive square root calculation.
+ *
+ * @n: The original number for which to calculate the square root.
+ * @x: The current estimate for the square root.
+ *
+ * Return: The natural square root of @n if it exists, or -1 if it does not.
+ */
+int calculate_sqrt(int n, int x)
+{
+if (x * x == n)
+{
+return (x);
+}
+else if (x * x > n)
 {
 return (-1);
 }
+else
+{
+return (_sqrt_recursion(n, x + 1));
 }
 }
 
