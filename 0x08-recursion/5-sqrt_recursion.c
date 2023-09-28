@@ -38,7 +38,7 @@ return (-1);
 }
 else
 {
-return (_sqrt_recursion(n, x + 1));
+return (calculate_sqrt(n, x + 1));
 }
 }
 
