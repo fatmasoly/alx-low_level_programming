@@ -13,6 +13,7 @@
  * Return: The natural square root of @n if it exists, or -1 if @n is
  * negative or does not have a natural square root.
  */
+int calculate_sqrt(int n, int x);
 int _sqrt_recursion(int n)
 {
 if (n < 0)
