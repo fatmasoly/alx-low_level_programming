@@ -27,4 +27,5 @@ ptr[i] = min++;
 }
 return (ptr);
 }
+}
 
