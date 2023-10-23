@@ -5,12 +5,16 @@
  */
 void free_listint2(listint_t **head)
 {
-listint_t *node, *temp;
-node = *head;
-while (node != NULL)
+listint_t *nod, *temp;
+if (!head)
 {
-temp = node;
-node = node->next;
+return;
+}
+nod = *head;
+while (nod)
+{
+temp = nod;
+nod = nod->next;
 free(temp);
 }
 *head = NULL;
