@@ -12,10 +12,26 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-listint_t *ptr, *temp;
+listint_t *ptr, *temp, *check;
 size_t nodes = 0;
 ptr = *h;
 while (ptr != NULL)
+{
+check = *h;
+while (check != ptr)
+{
+if (check == ptr->next)
+{
+printf("[%p] %d\n", (void *)ptr, ptr->n);
+nodes++;
+*h = ptr->next;
+free(ptr);
+ptr = *h;
+break;
+}
+check = check->next;
+}
+if (check == ptr)
 {
 printf("[%p] %d\n", (void *)ptr, ptr->n);
 nodes++;
@@ -23,15 +39,17 @@ temp = ptr;
 ptr = ptr->next;
 if (temp <= ptr)
 {
+printf("-> [%p] %d\n", (void *)ptr, ptr->n);
 if (ptr == NULL)
-printf("-> [%p] %d\n", (void *)ptr, ptr->n);
+*h = NULL;
 else
-printf("-> [%p] %d\n", (void *)ptr, ptr->n);
+*h = ptr->next;
+free(temp);
 break;
 }
 free(temp);
 }
-*h = NULL;
+}
 return (nodes);
 }
 
