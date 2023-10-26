@@ -12,24 +12,18 @@ void print_binary(unsigned long int n)
 {
 int msb = 0;
 int bits;
-if (n == 0)
-{
-_putchar('0');
-return;
-}
 bits = sizeof(unsigned long int) * 8;
-msb = 1 << (bits - 1);
-while (msb > 0)
+while (bits)
 {
-if (n & msb)
+if (n & 1l << --bits)
 {
 _putchar('1');
+msb++;
 }
-else if (n != 0)
-{
+else if (msb)
 _putchar('0');
 }
-msb = msb >> 1;
-}
+if (!msb)
+_putchar('0');
 }
 
