@@ -8,7 +8,7 @@
  * @file_from: File descriptor for the source file.
  * @argv: Array of program arguments.
  */
-void error_file(int file_from, int file_to, char *argv[])
+void file_err(int file_from, int file_to, char *argv[])
 {
 if (file_from == -1)
 {
@@ -42,16 +42,16 @@ exit(97);
 }
 file_from = open(argv[1], O_RDONLY);
 file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-error_file(file_from, file_to, argv);
+file_err(file_from, file_to, argv);
 c = 1024;
 while (c == 1024)
 {
 c = read(file_from, buff, 1024);
 if (c == -1)
-error_file(-1, 0, argv);
+file_err(-1, 0, argv);
 written = write(file_to, buff, c);
 if (written == -1)
-error_file(0, -1, argv);
+file_err(0, -1, argv);
 }
 err_close = close(file_from);
 if (err_close == -1)
