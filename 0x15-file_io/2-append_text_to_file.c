@@ -16,13 +16,14 @@ return (-1);
 fd = open(filename, O_WRONLY, O_APPEND);
 if (fd == -1)
 return (-1);
-if (strlen(text_content))
+if (text_content)
 {
 app = write(fd, text_content, strlen(text_content));
 if (app == -1)
+close(fd);
 return (-1);
 }
 close(fd);
-return (app == strlen(text_content) ? 1 : -1);
+return (1);
 }
 
