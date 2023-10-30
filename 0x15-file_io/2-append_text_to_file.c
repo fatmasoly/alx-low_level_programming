@@ -25,12 +25,11 @@ len  = strlen(text_content);
 if (len)
 {
 app = write(fd, text_content, len);
-close(fd);
-if (app != len)
+if (app == -1)
 return (-1);
-if (app == len)
+}
+close(fd);
 return (1);
 }
-return (-1);
-}
+
 
