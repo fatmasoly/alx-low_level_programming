@@ -21,10 +21,7 @@ if (text_content)
 {
 for (letters = 0 ; text_content[letters] ; letters++)
 app = write(fd, text_content, letters);
-if (app == -1)
-return (-1);
-}
 close(fd);
-return (1);
+return (app == letters ? 1 : -1);
 }
 
