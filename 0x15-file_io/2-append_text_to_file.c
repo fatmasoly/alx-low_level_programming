@@ -10,7 +10,7 @@
 int append_text_to_file(const char *filename, char *text_content)
 {
 int fd;
-int letters;
+int letters = 0;
 int app;
 if (filename == NULL)
 return (-1);
@@ -25,7 +25,7 @@ if (app == -1)
 return (-1);
 }
 if (app == letters)
-close(fp);
-return (1)
+close(fd);
+return (1);
 }
 
