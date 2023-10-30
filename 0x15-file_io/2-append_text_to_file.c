@@ -13,23 +13,14 @@ int fd;
 ssize_t app = 0;
 ssize_t len;
 if (filename == NULL)
-{
 return (-1);
-}
 fd = open(filename, O_WRONLY | O_APPEND);
 if (fd == -1)
-{
 return (-1);
-}
 len  = strlen(text_content);
 if (len)
-{
 app = write(fd, text_content, len);
-if (app == -1)
-return (-1);
-}
 close(fd);
-return (1);
+return (app == len ? 1 : -1);
 }
-
 
