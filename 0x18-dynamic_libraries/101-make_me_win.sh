@@ -1,4 +1,2 @@
 #!/bin/bash
-echo -e '#include <stdlib.h>\nvoid srand(unsigned int seed) { }' > /tmp/rand.c
-gcc -Wall -fPIC -shared -o /tmp/rand.so /tmp/rand.c
-LD_PRELOAD=/tmp/rand.so
+wget -P https://github.com/fatmasoly/alx-low_level_programming/blob/d27332e7cadd0d71061121500b3c482446578ff1/0x18-dynamic_libraries/
